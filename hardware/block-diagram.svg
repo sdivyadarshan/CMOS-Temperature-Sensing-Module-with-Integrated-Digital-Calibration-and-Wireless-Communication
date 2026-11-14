@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Ultra-Low-Power Temperature Sensing System Block Diagram</title>
+  <desc id="desc">DS18B20 temperature sensor feeds ESP32 processing and digital calibration. ESP32 communicates over Wi-Fi to a mobile browser dashboard. A 4.7 kilo-ohm pull-up resistor connects the One-Wire data line to 3.3 volts.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#263445"/></marker>
+    <style>
+      .box{fill:#fff;stroke:#263445;stroke-width:2.4;rx:12}
+      .head{font:600 22px Arial,sans-serif;fill:#172536}
+      .sub{font:16px Arial,sans-serif;fill:#46566a}
+      .label{font:15px Arial,sans-serif;fill:#263445}
+      .line{stroke:#263445;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+      .title{font:700 27px Arial,sans-serif;fill:#172536}
+    </style>
+  </defs>
+  <rect width="1200" height="430" fill="#fff"/>
+  <text x="600" y="48" text-anchor="middle" class="title">System Block Diagram</text>
+
+  <rect x="45" y="132" width="260" height="155" class="box"/>
+  <text x="175" y="174" text-anchor="middle" class="head">Sensing Module</text>
+  <text x="175" y="211" text-anchor="middle" class="sub">DS18B20 digital</text>
+  <text x="175" y="235" text-anchor="middle" class="sub">temperature sensor</text>
+  <text x="175" y="264" text-anchor="middle" class="label">One-Wire interface</text>
+
+  <rect x="470" y="132" width="260" height="155" class="box"/>
+  <text x="600" y="174" text-anchor="middle" class="head">Processing Module</text>
+  <text x="600" y="211" text-anchor="middle" class="sub">ESP32 DevKit</text>
+  <text x="600" y="235" text-anchor="middle" class="sub">Digital calibration</text>
+  <text x="600" y="264" text-anchor="middle" class="label">Measured value + offset</text>
+
+  <rect x="895" y="132" width="260" height="155" class="box"/>
+  <text x="1025" y="174" text-anchor="middle" class="head">Wireless &amp; Display</text>
+  <text x="1025" y="211" text-anchor="middle" class="sub">Wi-Fi / HTTP server</text>
+  <text x="1025" y="235" text-anchor="middle" class="sub">Mobile web browser</text>
+  <text x="1025" y="264" text-anchor="middle" class="label">Temperature display</text>
+
+  <path d="M305 210 H460" class="line"/>
+  <text x="382" y="193" text-anchor="middle" class="label">Digital data</text>
+  <path d="M730 210 H885" class="line"/>
+  <text x="807" y="193" text-anchor="middle" class="label">Wi-Fi</text>
+
+  <rect x="470" y="337" width="260" height="58" class="box"/>
+  <text x="600" y="373" text-anchor="middle" class="sub">USB 5 V power to ESP32</text>
+  <path d="M600 337 V298" class="line"/>
+  <text x="620" y="321" class="label">Power</text>
+
+  <text x="600" y="418" text-anchor="middle" class="label">Prototype implementation: ESP32 + DS18B20; calibration is software-based.</text>
+</svg>
